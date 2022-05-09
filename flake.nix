@@ -7,14 +7,6 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs."bcrypt-master".dir   = "master";
-  inputs."bcrypt-master".owner = "nim-nix-pkgs";
-  inputs."bcrypt-master".ref   = "master";
-  inputs."bcrypt-master".repo  = "bcrypt";
-  inputs."bcrypt-master".type  = "github";
-  inputs."bcrypt-master".inputs.nixpkgs.follows = "nixpkgs";
-  inputs."bcrypt-master".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
-  
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@inputs:
   let 
     lib  = flakeNimbleLib.lib;
